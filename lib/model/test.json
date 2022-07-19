@@ -1,0 +1,115 @@
+var Student_data = [
+    {
+        "Name": "Ahmad",
+        "kelas": "4A",
+        "setoran": [
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            }
+
+        ]
+    },
+
+    {
+        "Name": "rian",
+        "kelas": "3A",
+        "setoran": [
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            }
+
+        ]
+    },
+
+    {
+        "Name": "reza",
+        "kelas": "4C",
+        "setoran": [
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            },
+            {
+                "tanggal": "20 January 2021",
+                "surat": "Al-baqarah",
+                "ayat_terakhir": 32
+            }
+
+        ]
+    }
+]
