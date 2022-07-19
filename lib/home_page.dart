@@ -23,7 +23,62 @@ class HomePage extends StatelessWidget {
           return const DaftarSiswa();
         },
       ),
-      
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (context) {
+              return const AccessDenied();
+            },
+          );
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+class AccessDenied extends StatelessWidget {
+  const AccessDenied({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      elevation: 5,
+      title: const Text(
+        "AKSES DITOLAK!",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 25.0,
+          fontWeight: FontWeight.w700,
+          color: Color(0xff990000),
+        ),
+      ),
+      content: const Text(
+        "Fitur ditutup untuk pengguna tamu. \n silahkan hubungi bagian tata usaha. \n\n Terimakasih.",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 15.0,
+          fontWeight: FontWeight.w700,
+          color: Colors.black,
+        ),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: const Text(
+            'Tutup',
+            style: TextStyle(fontSize: 18.0),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -55,7 +110,8 @@ class DaftarSiswa extends StatelessWidget {
                 ),
                 elevation: 4,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 21.0, vertical: 7.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 21.0, vertical: 7.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -68,7 +124,9 @@ class DaftarSiswa extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 10.0,),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
                       Text(
                         element.name,
                         textAlign: TextAlign.start,
@@ -77,7 +135,9 @@ class DaftarSiswa extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 5.0,),
+                      const SizedBox(
+                        height: 5.0,
+                      ),
                       Text(
                         'Kelas ${element.kelas}',
                         textAlign: TextAlign.start,
@@ -85,7 +145,7 @@ class DaftarSiswa extends StatelessWidget {
                           fontSize: 15.0,
                           fontWeight: FontWeight.w500,
                           color: Colors.grey,
-                        ),  
+                        ),
                       ),
                     ],
                   ),
