@@ -1,252 +1,79 @@
 import 'package:flutter/material.dart';
+import 'package:recitation_report/model/student_model.dart';
 
-// import 'package:flutter_svg/flutter_svg.dart';
+class DetailPage extends StatefulWidget {
+  
+  final StudentModel? elementUser;
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+
+  const DetailPage({Key? key, this.elementUser}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<DetailPage> createState() => _DetailPageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _DetailPageState extends State<DetailPage> {
+  
+  //TODO: error
+  get elementUser => elementUser;
+
   @override
   Widget build(BuildContext context) {
-
-    // Text Style for Card
-    const cardTextStyle = TextStyle(
-      fontFamily: "Montserrat Regular",
-      fontWeight: FontWeight.w500,
-      fontSize: 14,
-      color: Color.fromRGBO(63, 63, 63, 1),
-    );
-
     return Scaffold(
-      body: Stack(
-        children: [
-
-          // Background Image on Header
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                alignment: Alignment.topCenter,
-                image: AssetImage('assets/images/top_header.png'),
-              ),
-            ),
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          'Laporan Hapalan',
+          style: TextStyle(
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
           ),
-
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                children: [                      
-                  
-                  //Profile Section                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                  Container(
-                    height: 64,
-                    margin: const EdgeInsets.only(bottom: 20, top:20,),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const CircleAvatar(
-                          radius: 32,
-                          backgroundImage: NetworkImage('https://i.pinimg.com/originals/78/07/03/78070395106fcd1c3e66e3b3810568bb.jpg'),
-                        ),
-                        const SizedBox(width: 16,),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Jhon Doe', 
-                              style: TextStyle(
-                                fontFamily: 'Montserrat Regular',
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            Text(
-                              '404040',
-                              style: TextStyle(
-                                fontFamily: 'Montserrat Regular',
-                                color: Colors.white,
-                                fontSize: 14,
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  
-                  // Card List Section
-                  Expanded(
-                    child: GridView.count(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 25,
-                      primary: false,
-                      children: [
-
-                        // Personal Data Card
-                        Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-
-                              // Use from emmbed SVG URL
-                              // SvgPicture.network(
-                              //   "https://image.flaticon.com/icons/svg/1904/1904425.svg"
-                              // ),
-                              
-                              // Use from icon image assets
-                              Image(
-                                image: AssetImage('assets/icons/student.png'),
-                              ),
-                              
-                              Padding(
-                                padding: EdgeInsets.only(top: 10),
-                                child: Text(
-                                  'Personal Data', 
-                                  style: cardTextStyle,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        // Course Schedule Card
-                        Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Image(
-                                image: AssetImage('assets/icons/schedule.png'),
-                              ),
-                              
-                              Padding(
-                                padding: EdgeInsets.only(top: 10),
-                                child: Text(
-                                  'Course Schedule', 
-                                  style: cardTextStyle,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        // Study Result
-                        Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Image(
-                                image: AssetImage('assets/icons/prize.png'),
-                              ),
-                              
-                              Padding(
-                                padding: EdgeInsets.only(top: 10),
-                                child: Text(
-                                  'Study Result', 
-                                  style: cardTextStyle,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        // Attendance Recap Card
-                        Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Image(
-                                image: AssetImage('assets/icons/id.png'),
-                              ),
-                              
-                              Padding(
-                                padding: EdgeInsets.only(top: 10),
-                                child: Text(
-                                  'Attendance Recap', 
-                                  style: cardTextStyle,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        // Course Booking Card
-                        Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Image(
-                                image: AssetImage('assets/icons/files.png'),
-                              ),
-                              
-                              Padding(
-                                padding: EdgeInsets.only(top: 10),
-                                child: Text(
-                                  'Course Booking', 
-                                  style: cardTextStyle,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        // Course Plan Card
-                        Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          elevation: 4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Image(
-                                image: AssetImage('assets/icons/book.png'),
-                              ),
-                              
-                              Padding(
-                                padding: EdgeInsets.only(top: 10),
-                                child: Text(
-                                  'Course Plan', 
-                                  style: cardTextStyle,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          )
-        ],
+        ),
       ),
+      body: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+        return ListView(
+          children: [
+            _createDataTable(elementUser),
+          ],
+        );
+      }),
     );
   }
+}
+
+
+Widget _createDataTable(StudentModel elementUser) {
+  List<DataRow> rows = [];
+
+    for (var row in elementUser.setoran) {
+      rows.add(
+        DataRow(
+          cells: [
+            DataCell(
+              Text(row['tanggal']),
+            ),
+            DataCell(
+              Text(row['surat']),
+            ),
+            DataCell(
+              Text(row['ayat_terakhir'].toString()),
+            ),
+          ],
+        ),
+      );
+  }
+
+  return DataTable(
+    columns: _createColumns(),
+    rows: rows,
+  );
+}
+
+List<DataColumn> _createColumns() {
+  return [
+    const DataColumn(label: Text('Tanggal')),
+    const DataColumn(label: Text('Surat Terakhir')),
+    const DataColumn(label: Text('Ayat Terakhir')),
+  ];
 }

@@ -47,7 +47,7 @@ class AccessDenied extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8.0),
+        borderRadius: BorderRadius.circular(10.0),
       ),
       elevation: 5,
       title: const Text(
@@ -96,11 +96,11 @@ class DaftarSiswa extends StatelessWidget {
           mainAxisSpacing: 20,
           crossAxisSpacing: 15,
           primary: false,
-          children: studentData.map((element) {
+          children: studentData.map((elementUser) {
             return InkWell(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return DetailPage(element: element);
+                  return DetailPage(elementUser: elementUser);
                 }));
               },
               child: Card(
@@ -119,7 +119,7 @@ class DaftarSiswa extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(7.0),
                           child: Image.asset(
-                            element.avatar,
+                            elementUser.avatar,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -128,7 +128,7 @@ class DaftarSiswa extends StatelessWidget {
                         height: 10.0,
                       ),
                       Text(
-                        element.name,
+                        elementUser.name,
                         textAlign: TextAlign.start,
                         style: const TextStyle(
                           fontSize: 20.0,
@@ -139,7 +139,7 @@ class DaftarSiswa extends StatelessWidget {
                         height: 5.0,
                       ),
                       Text(
-                        'Kelas ${element.kelas}',
+                        'Kelas ${elementUser.kelas}',
                         textAlign: TextAlign.start,
                         style: const TextStyle(
                           fontSize: 15.0,

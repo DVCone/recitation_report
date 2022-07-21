@@ -58,69 +58,69 @@ var studentData = [
     ],
   ),
   StudentModel(
-    name: 'Dika',
-    kelas: '6A',
+    name: 'Sandysta',
+    kelas: '5C',
     avatar: 'assets/images/avatar5.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 50}
+      {"tanggal": "20 juni 2021", "surat": "An-Naml", "ayat_terakhir": 20},
+      {"tanggal": "23 juni 2021", "surat": "An-Naml", "ayat_terakhir": 30},
+      {"tanggal": "26 juni 2021", "surat": "An-Naml", "ayat_terakhir": 40},
+      {"tanggal": "29 juni 2021", "surat": "An-Naml", "ayat_terakhir": 50}
     ],
   ),
   StudentModel(
-    name: 'Dika',
+    name: 'Yahya',
     kelas: '6A',
     avatar: 'assets/images/avatar6.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 50}
+      {"tanggal": "20 juni 2021", "surat": "Al-Maidah", "ayat_terakhir": 20},
+      {"tanggal": "23 juni 2021", "surat": "Al-Maidah", "ayat_terakhir": 30},
+      {"tanggal": "26 juni 2021", "surat": "Al-Maidah", "ayat_terakhir": 40},
+      {"tanggal": "29 juni 2021", "surat": "Al-Maidah", "ayat_terakhir": 50}
     ],
   ),
   StudentModel(
-    name: 'Dika',
-    kelas: '6A',
+    name: 'Dimas',
+    kelas: '4A',
     avatar: 'assets/images/avatar7.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 50}
+      {"tanggal": "20 juni 2021", "surat": "Al-Kahf", "ayat_terakhir": 20},
+      {"tanggal": "23 juni 2021", "surat": "Al-Kahf", "ayat_terakhir": 30},
+      {"tanggal": "26 juni 2021", "surat": "Al-Kahf", "ayat_terakhir": 40},
+      {"tanggal": "29 juni 2021", "surat": "Al-Kahf", "ayat_terakhir": 50}
     ],
   ),
   StudentModel(
-    name: 'Dika',
-    kelas: '6A',
+    name: 'Hamzah',
+    kelas: '4B',
     avatar: 'assets/images/avatar8.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 50}
+      {"tanggal": "20 juni 2021", "surat": "Al-Baqarah", "ayat_terakhir": 20},
+      {"tanggal": "23 juni 2021", "surat": "Al-Baqarah", "ayat_terakhir": 30},
+      {"tanggal": "26 juni 2021", "surat": "Al-Baqarah", "ayat_terakhir": 40},
+      {"tanggal": "29 juni 2021", "surat": "Al-Baqarah", "ayat_terakhir": 50}
     ],
   ),
   StudentModel(
-    name: 'Dika',
-    kelas: '6A',
+    name: 'Zaidan',
+    kelas: '5C',
     avatar: 'assets/images/avatar9.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 50}
+      {"tanggal": "20 juni 2021", "surat": "Al-Anfal", "ayat_terakhir": 20},
+      {"tanggal": "23 juni 2021", "surat": "Al-Anfal", "ayat_terakhir": 30},
+      {"tanggal": "26 juni 2021", "surat": "Al-Anfal", "ayat_terakhir": 40},
+      {"tanggal": "29 juni 2021", "surat": "Al-Anfal", "ayat_terakhir": 50}
     ],
   ),
   StudentModel(
-    name: 'Dika',
+    name: 'Farid',
     kelas: '6A',
     avatar: 'assets/images/avatar10.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 50}
+      {"tanggal": "20 juni 2021", "surat": "Maryam", "ayat_terakhir": 20},
+      {"tanggal": "23 juni 2021", "surat": "Maryam", "ayat_terakhir": 30},
+      {"tanggal": "26 juni 2021", "surat": "Maryam", "ayat_terakhir": 40},
+      {"tanggal": "29 juni 2021", "surat": "Maryam", "ayat_terakhir": 50}
     ],
   ),
 ];
