@@ -10,6 +10,8 @@ class StudentModel {
   String kelas;
   String avatar;
   List<Map<String, dynamic>> setoran;
+
+  get elementUser => int.parse(setoran[1]['id'].toString());
 }
 
 var studentData = [
@@ -18,10 +20,30 @@ var studentData = [
     kelas: '4D',
     avatar: 'assets/images/avatar1.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "Al-baqarah", "ayat_terakhir": 23},
-      {"tanggal": "23 juni 2021", "surat": "Al-baqarah", "ayat_terakhir": 34},
-      {"tanggal": "26 juni 2021", "surat": "Al-baqarah", "ayat_terakhir": 45},
-      {"tanggal": "29 juni 2021", "surat": "Al-baqarah", "ayat_terakhir": 55}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "Al-baqarah",
+        "ayat_terakhir": 55,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "Al-baqarah",
+        "ayat_terakhir": 45,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "Al-baqarah",
+        "ayat_terakhir": 34,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "Al-baqarah",
+        "ayat_terakhir": 23,
+      },
     ],
   ),
   StudentModel(
@@ -29,10 +51,30 @@ var studentData = [
     kelas: '5D',
     avatar: 'assets/images/avatar2.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "Ali imran", "ayat_terakhir": 15},
-      {"tanggal": "23 juni 2021", "surat": "Ali imran", "ayat_terakhir": 22},
-      {"tanggal": "26 juni 2021", "surat": "Ali imran", "ayat_terakhir": 34},
-      {"tanggal": "29 juni 2021", "surat": "Ali imran", "ayat_terakhir": 47}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "Ali imran",
+        "ayat_terakhir": 47,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "Ali imran",
+        "ayat_terakhir": 34,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "Ali imran",
+        "ayat_terakhir": 22,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "Ali imran",
+        "ayat_terakhir": 15,
+      },
     ],
   ),
   StudentModel(
@@ -40,10 +82,30 @@ var studentData = [
     kelas: '5A',
     avatar: 'assets/images/avatar3.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "Ali imran", "ayat_terakhir": 22},
-      {"tanggal": "23 juni 2021", "surat": "Ali imran", "ayat_terakhir": 29},
-      {"tanggal": "26 juni 2021", "surat": "Ali imran", "ayat_terakhir": 38},
-      {"tanggal": "29 juni 2021", "surat": "Ali imran", "ayat_terakhir": 50}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "Ali imran",
+        "ayat_terakhir": 50,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "Ali imran",
+        "ayat_terakhir": 38,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "Ali imran",
+        "ayat_terakhir": 29,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "Ali imran",
+        "ayat_terakhir": 22,
+      },
     ],
   ),
   StudentModel(
@@ -51,10 +113,30 @@ var studentData = [
     kelas: '6A',
     avatar: 'assets/images/avatar4.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "An-Nisa", "ayat_terakhir": 50}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "An-Nisa",
+        "ayat_terakhir": 50,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "An-Nisa",
+        "ayat_terakhir": 40,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "An-Nisa",
+        "ayat_terakhir": 30,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "An-Nisa",
+        "ayat_terakhir": 20,
+      },
     ],
   ),
   StudentModel(
@@ -62,10 +144,30 @@ var studentData = [
     kelas: '5C',
     avatar: 'assets/images/avatar5.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "An-Naml", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "An-Naml", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "An-Naml", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "An-Naml", "ayat_terakhir": 50}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "An-Naml",
+        "ayat_terakhir": 50,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "An-Naml",
+        "ayat_terakhir": 40,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "An-Naml",
+        "ayat_terakhir": 30,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "An-Naml",
+        "ayat_terakhir": 20,
+      },
     ],
   ),
   StudentModel(
@@ -73,10 +175,30 @@ var studentData = [
     kelas: '6A',
     avatar: 'assets/images/avatar6.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "Al-Maidah", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "Al-Maidah", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "Al-Maidah", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "Al-Maidah", "ayat_terakhir": 50}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "Al-Maidah",
+        "ayat_terakhir": 50,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "Al-Maidah",
+        "ayat_terakhir": 40,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "Al-Maidah",
+        "ayat_terakhir": 30,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "Al-Maidah",
+        "ayat_terakhir": 20,
+      },
     ],
   ),
   StudentModel(
@@ -84,10 +206,30 @@ var studentData = [
     kelas: '4A',
     avatar: 'assets/images/avatar7.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "Al-Kahf", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "Al-Kahf", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "Al-Kahf", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "Al-Kahf", "ayat_terakhir": 50}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "Al-Kahf",
+        "ayat_terakhir": 50,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "Al-Kahf",
+        "ayat_terakhir": 40,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "Al-Kahf",
+        "ayat_terakhir": 30,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "Al-Kahf",
+        "ayat_terakhir": 20,
+      },
     ],
   ),
   StudentModel(
@@ -95,10 +237,30 @@ var studentData = [
     kelas: '4B',
     avatar: 'assets/images/avatar8.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "Al-Baqarah", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "Al-Baqarah", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "Al-Baqarah", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "Al-Baqarah", "ayat_terakhir": 50}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "Al-Baqarah",
+        "ayat_terakhir": 50,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "Al-Baqarah",
+        "ayat_terakhir": 40,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "Al-Baqarah",
+        "ayat_terakhir": 30,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "Al-Baqarah",
+        "ayat_terakhir": 20,
+      },
     ],
   ),
   StudentModel(
@@ -106,10 +268,30 @@ var studentData = [
     kelas: '5C',
     avatar: 'assets/images/avatar9.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "Al-Anfal", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "Al-Anfal", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "Al-Anfal", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "Al-Anfal", "ayat_terakhir": 50}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "Al-Anfal",
+        "ayat_terakhir": 50,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "Al-Anfal",
+        "ayat_terakhir": 40,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "Al-Anfal",
+        "ayat_terakhir": 30,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "Al-Anfal",
+        "ayat_terakhir": 20,
+      },
     ],
   ),
   StudentModel(
@@ -117,10 +299,30 @@ var studentData = [
     kelas: '6A',
     avatar: 'assets/images/avatar10.jpg',
     setoran: [
-      {"tanggal": "20 juni 2021", "surat": "Maryam", "ayat_terakhir": 20},
-      {"tanggal": "23 juni 2021", "surat": "Maryam", "ayat_terakhir": 30},
-      {"tanggal": "26 juni 2021", "surat": "Maryam", "ayat_terakhir": 40},
-      {"tanggal": "29 juni 2021", "surat": "Maryam", "ayat_terakhir": 50}
+      {
+        "id": 4,
+        "tanggal": "29 juni 2021",
+        "surat": "Maryam",
+        "ayat_terakhir": 50,
+      },
+      {
+        "id": 3,
+        "tanggal": "26 juni 2021",
+        "surat": "Maryam",
+        "ayat_terakhir": 40,
+      },
+      {
+        "id": 2,
+        "tanggal": "23 juni 2021",
+        "surat": "Maryam",
+        "ayat_terakhir": 30,
+      },
+      {
+        "id": 1,
+        "tanggal": "20 juni 2021",
+        "surat": "Maryam",
+        "ayat_terakhir": 20,
+      },
     ],
   ),
 ];

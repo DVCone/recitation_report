@@ -10,9 +10,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
-          'Laporan Hapalan',
-          style: TextStyle(
+        title: Text(
+          "Size: ${MediaQuery.of(context).size.width}",
+          style: const TextStyle(
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
           ),
@@ -20,7 +20,13 @@ class HomePage extends StatelessWidget {
       ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraits) {
-          return const DaftarSiswa();
+          if (constraits.maxWidth <= 600) {
+            return const DaftarSiswa(gridCount: 2);
+          } else if (constraits.maxWidth <= 1200) {
+            return const DaftarSiswa(gridCount: 4);
+          } else {
+            return const DaftarSiswa(gridCount: 6);
+          }
         },
       ),
       floatingActionButton: FloatingActionButton(
@@ -84,7 +90,9 @@ class AccessDenied extends StatelessWidget {
 }
 
 class DaftarSiswa extends StatelessWidget {
-  const DaftarSiswa({Key? key}) : super(key: key);
+  const DaftarSiswa({Key? key, required this.gridCount}) : super(key: key);
+
+  final int gridCount;
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +100,7 @@ class DaftarSiswa extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: GridView.count(
-          crossAxisCount: 2,
+          crossAxisCount: gridCount,
           mainAxisSpacing: 20,
           crossAxisSpacing: 15,
           primary: false,

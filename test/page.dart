@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recitation_report/model/student_model.dart';
 
 class DetailPage extends StatefulWidget {
-  
   final StudentModel? elementUser;
-
 
   const DetailPage({Key? key, this.elementUser}) : super(key: key);
 
@@ -13,10 +11,6 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
-  
-  //TODO: error
-  get elementUser => elementUser;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,19 +28,22 @@ class _DetailPageState extends State<DetailPage> {
           builder: (BuildContext context, BoxConstraints constraints) {
         return ListView(
           children: [
-            _createDataTable(elementUser),
+            Container(
+              child: Row(
+                children: [],
+              ),
+            ),
+            _createDataTable(widget.elementUser),
           ],
         );
       }),
     );
   }
-}
 
+  _createDataTable(StudentModel? elementUser) {
+    List<DataRow> rows = [];
 
-Widget _createDataTable(StudentModel elementUser) {
-  List<DataRow> rows = [];
-
-    for (var row in elementUser.setoran) {
+    for (var row in elementUser!.setoran) {
       rows.add(
         DataRow(
           cells: [
@@ -62,18 +59,24 @@ Widget _createDataTable(StudentModel elementUser) {
           ],
         ),
       );
+    }
+
+    List<DataColumn> _createColumns(elementUser) {
+      return [
+        const DataColumn(
+          label: Text('Tanggal'),
+        ),
+        const DataColumn(label: Text('Surat Terakhir')),
+        const DataColumn(
+          label: Text('Ayat Terakhir'),
+          // numeric: true,
+        ),
+      ];
+    }
+
+    return DataTable(
+      columns: _createColumns(elementUser),
+      rows: rows,
+    );
   }
-
-  return DataTable(
-    columns: _createColumns(),
-    rows: rows,
-  );
-}
-
-List<DataColumn> _createColumns() {
-  return [
-    const DataColumn(label: Text('Tanggal')),
-    const DataColumn(label: Text('Surat Terakhir')),
-    const DataColumn(label: Text('Ayat Terakhir')),
-  ];
 }
