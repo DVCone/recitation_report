@@ -1,16 +1,19 @@
-# recitation_report
+# Halaqah Qur'an 
 
-Recitation Report
+---
+## Deskripsi dan detail
+**Aplikasi Halaqah Qur'an** merupakan sebuah aplikasi notasi laporan untuk mendata perkembangan dari hapalan kitab suci Al-Qur'an oleh para santri.
 
-## Getting Started
+Aplikasi ini dapat berjalan dengan baik pada platform Android beserta semua variasi ukuran layar (Responsive) bagi platform halaman web. 
 
-This project is a starting point for a Flutter application.
+Berikut adalah detail data program dari **Aplikasi Halaqah Qur'an** :
 
-A few resources to get you started if this is your first Flutter project:
+- Versi Program:
+    - Dart v.2.18.0-271.0.dev
+    - Flutter v.3.0.5
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+> PERHATIAN! pastikan anda menggunakan versi program yang sama atau terbaru agar dapat dieksekusi dengan baik.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+## Dokumentasi
+1. 

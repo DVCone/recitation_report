@@ -1,3 +1,5 @@
+
+//Model Structure
 class StudentModel {
   StudentModel({
     required this.name,
@@ -14,6 +16,7 @@ class StudentModel {
   get elementUser => int.parse(setoran[1]['id'].toString());
 }
 
+//Model Data Variable
 var studentData = [
   StudentModel(
     name: 'Ahmad',
