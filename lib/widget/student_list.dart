@@ -32,7 +32,7 @@ class DaftarSiswa extends StatelessWidget {
               elevation: 4,
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 21.0, vertical: 7.0),
+                    horizontal: 24.0, vertical: 8.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -56,6 +56,9 @@ class DaftarSiswa extends StatelessWidget {
                       'Kelas ${elementUser.kelas}',
                       textAlign: TextAlign.start,
                       style: subtitle,
+                    ),
+                    const SizedBox(
+                      height: 5,
                     ),
                   ],
                 ),

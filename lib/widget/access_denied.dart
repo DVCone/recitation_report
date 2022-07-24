@@ -19,7 +19,7 @@ class AccessDenied extends StatelessWidget {
         style: accessDeniedHeader,
       ),
       content: const Text(
-        "Fitur ditutup untuk pengguna tamu. \n silahkan hubungi bagian tata usaha. \n\n Terimakasih.",
+        "Fitur ditutup untuk pengguna tamu. silahkan hubungi bagian tata usaha. \n\n Terimakasih.",
         textAlign: TextAlign.center,
         style: accessDeniedBody,
       ),

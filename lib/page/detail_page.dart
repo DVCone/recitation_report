@@ -5,23 +5,18 @@ import 'package:recitation_report/widget/student_card.dart';
 import 'package:recitation_report/widget/access_denied.dart';
 import 'package:recitation_report/widget/table_card.dart';
 
-class DetailPage extends StatefulWidget {
+class DetailPage extends StatelessWidget {
   final StudentModel? elementUser;
 
   const DetailPage({Key? key, this.elementUser}) : super(key: key);
 
   @override
-  State<DetailPage> createState() => _DetailPageState();
-}
-
-class _DetailPageState extends State<DetailPage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
-          "Halaqah Qur'an",
+        title: Text(
+          "Size: ${MediaQuery.of(context).size.width}",
           style: appTitle,
         ),
       ),
@@ -38,9 +33,7 @@ class _DetailPageState extends State<DetailPage> {
                 ),
                 mediumSpace,
                 Stack(
-                  children: [
-                    StudentCard(elementUser: widget.elementUser),
-                  ],
+                  children: [studentCardWidth(context, constraints)],
                 ),
                 bigSpace,
                 const Text(
@@ -48,7 +41,7 @@ class _DetailPageState extends State<DetailPage> {
                   style: title,
                 ),
                 mediumSpace,
-                _createDataTable(widget.elementUser),
+                reportCardWidt(context, constraints),
               ],
             ),
           );
@@ -67,43 +60,54 @@ class _DetailPageState extends State<DetailPage> {
       ),
     );
   }
-}
 
-_createDataTable(StudentModel? elementUser) {
-  List<DataRow> rows = [];
-
-  for (var row in elementUser!.setoran) {
-    rows.add(
-      DataRow(
-        cells: [
-          DataCell(
-            Text(
-              row['tanggal'],
-              textAlign: TextAlign.center,
-              style: rowTable,
-            ),
-          ),
-          DataCell(
-            Text(
-              row['surat'],
-              textAlign: TextAlign.center,
-              style: rowTable,
-            ),
-          ),
-          DataCell(
-            Text(
-              row['ayat_terakhir'].toString(),
-              textAlign: TextAlign.center,
-              style: rowTable,
-            ),
-          ),
-        ],
-      ),
-    );
+  studentCardWidth(BuildContext context, BoxConstraints constraints) {
+    if (constraints.maxWidth <= 360) {
+      return StudentCard(
+        elementUser: elementUser,
+        widthSize: 320,
+        imageSize: 120,
+        subtitleSize: 12,
+        titleSize: 15,
+        paddingSize: 25,
+        attendanceSize: 50,
+      );
+    } else if (constraints.maxWidth <= 480) {
+      return StudentCard(
+        elementUser: elementUser,
+        widthSize: 450,
+        imageSize: 130,
+        titleSize: 20,
+        subtitleSize: 15,
+        paddingSize: 20,
+        attendanceSize: 110,
+      );
+    } else {
+      return StudentCard(
+        elementUser: elementUser,
+        widthSize: 450,
+        imageSize: 130,
+        titleSize: 20,
+        subtitleSize: 15,
+        paddingSize: 20,
+        attendanceSize: 130,
+      );
+    }
   }
 
-  return TableCard(
-    rows: rows,
-    elementUser: elementUser,
-  );
+  reportCardWidt(BuildContext context, BoxConstraints constraints) {
+    if (constraints.maxWidth <= 360) {
+      return TableCard(
+        elementUser: elementUser,
+        columnSize: 11,
+        rowSize: 10,
+      );
+    } else {
+      return TableCard(
+        elementUser: elementUser,
+        columnSize: 15,
+        rowSize: 12,
+      );
+    }
+  }
 }

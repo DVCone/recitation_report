@@ -34,13 +34,11 @@ const accessDeniedClose = TextStyle(fontSize: 18.0);
 
 //detail_page.dart
 const columnTable = TextStyle(
-  fontSize: 15.0,
   fontWeight: FontWeight.bold,
   color: Colors.lightBlue,
 );
 
 const rowTable = TextStyle(
-  fontSize: 13.0,
   fontWeight: FontWeight.bold,
 );
 
@@ -67,4 +65,8 @@ const verySmallSpace = SizedBox(
 
 const wideSpace = SizedBox(
   width: 30,
+);
+
+const smallWideSpace = SizedBox(
+  width: 12,
 );

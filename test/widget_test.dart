@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+import 'package:recitation_report/style/style.dart';
+import 'package:recitation_report/widget/access_denied.dart';
+import 'package:recitation_report/widget/student_list.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          "Size: ${MediaQuery.of(context).size.width}",
+          style: appTitle,
+        ),
+      ),
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraits) {
+          if (constraits.maxWidth <= 750) {
+            return const DaftarSiswa(gridCount: 2);
+          } else if (constraits.maxWidth <= 1200) {
+            return const DaftarSiswa(gridCount: 4);
+          } else {
+            return const DaftarSiswa(gridCount: 6);
+          }
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (context) {
+              return const AccessDenied();
+            },
+          );
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}

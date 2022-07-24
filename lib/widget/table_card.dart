@@ -5,36 +5,70 @@ import 'package:recitation_report/style/style.dart';
 class TableCard extends StatelessWidget {
   const TableCard({
     Key? key,
-    required this.rows,
     required this.elementUser,
+    required this.columnSize, required this.rowSize,
   }) : super(key: key);
 
-  final List<DataRow> rows;
   final StudentModel? elementUser;
+
+  final double columnSize;
+  final double rowSize;
 
   @override
   Widget build(BuildContext context) {
+    List<DataRow> rows = [];
+
+    for (var row in elementUser!.setoran) {
+      rows.add(
+        DataRow(
+          cells: [
+            DataCell(
+              Text(
+                row['tanggal'],
+                textAlign: TextAlign.center,
+                style: rowTable.copyWith(fontSize: rowSize),
+              ),
+            ),
+            DataCell(
+              Text(
+                row['surat'],
+                textAlign: TextAlign.center,
+                style: rowTable.copyWith(fontSize: rowSize),
+              ),
+            ),
+            DataCell(
+              Text(
+                row['ayat_terakhir'].toString(),
+                textAlign: TextAlign.center,
+                style: rowTable.copyWith(fontSize: rowSize),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     List<DataColumn> _createColumns(elementUser) {
       return [
-        const DataColumn(
+        DataColumn(
           label: Text(
             'Tanggal',
             textAlign: TextAlign.center,
-            style: columnTable,
+            style: columnTable.copyWith(fontSize: columnSize),
           ),
         ),
-        const DataColumn(
+        DataColumn(
           label: Text(
             'Surat \n Terakhir',
             textAlign: TextAlign.center,
-            style: columnTable,
+            style: columnTable.copyWith(fontSize: columnSize),
           ),
         ),
-        const DataColumn(
+        DataColumn(
           label: Text(
             'Ayat \n Terakhir',
             textAlign: TextAlign.center,
-            style: columnTable,
+            style: columnTable.copyWith(fontSize: columnSize),
           ),
         ),
       ];
@@ -45,12 +79,9 @@ class TableCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       elevation: 4.0,
-      child: Container(
-        padding: const EdgeInsets.all(8.0),
-        child: DataTable(
-          columns: _createColumns(elementUser),
-          rows: rows,
-        ),
+      child: DataTable(
+        columns: _createColumns(elementUser),
+        rows: rows,
       ),
     );
   }
