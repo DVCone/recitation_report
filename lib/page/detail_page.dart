@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recitation_report/model/student_model.dart';
 import 'package:recitation_report/style/style.dart';
+import 'package:recitation_report/widget/day_list.dart';
 import 'package:recitation_report/widget/student_card.dart';
 import 'package:recitation_report/widget/access_denied.dart';
 import 'package:recitation_report/widget/table_card.dart';
@@ -8,7 +9,10 @@ import 'package:recitation_report/widget/table_card.dart';
 class DetailPage extends StatelessWidget {
   final StudentModel? elementUser;
 
-  const DetailPage({Key? key, this.elementUser}) : super(key: key);
+  const DetailPage({
+    Key? key,
+    this.elementUser,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +37,20 @@ class DetailPage extends StatelessWidget {
                 ),
                 mediumSpace,
                 Stack(
-                  children: [studentCardWidth(context, constraints)],
+                  children: [
+                    studentCardWidth(context, constraints),
+                  ],
+                ),
+                bigSpace,
+                const Text(
+                  "Absensi Kehadiran",
+                  style: title,
+                ),
+                mediumSpace,
+                Stack(
+                  children: [
+                    dayListPage(context, constraints),
+                  ],
                 ),
                 bigSpace,
                 const Text(
@@ -107,6 +124,28 @@ class DetailPage extends StatelessWidget {
         elementUser: elementUser,
         columnSize: 15,
         rowSize: 12,
+      );
+    }
+  }
+
+  dayListPage(BuildContext context, BoxConstraints constraints) {
+    if (constraints.maxWidth <= 360) {
+      return const DayList(
+        attendanceSize: 50,
+        subtitleSize: 12,
+        widthSize: 320,
+      );
+    } else if (constraints.maxWidth <= 480) {
+      return const DayList(
+        attendanceSize: 110,
+        subtitleSize: 15,
+        widthSize: 450,
+      );
+    } else {
+      return const DayList(
+        attendanceSize: 130,
+        subtitleSize: 15,
+        widthSize: 450,
       );
     }
   }

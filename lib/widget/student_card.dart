@@ -88,18 +88,6 @@ class StudentCard extends StatelessWidget {
                   )
                 ],
               ),
-              mediumSpace,
-              Text(
-                "Absensi: ",
-                style: TextStyle(
-                  fontSize: titleSize,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              DayList(
-                attendanceSize: attendanceSize,
-                subtitleSize: subtitleSize,
-              ),
             ],
           ),
         ),

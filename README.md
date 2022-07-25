@@ -52,6 +52,15 @@ Berikut adalah detail data program dari **Aplikasi Halaqah Qur'an** :
 - Seluruh sumber kode dalam Aplikasi ini bersifat PUBLIK dan penulis membuka publikasi kode ini pada gudang kode (repository code) miliknya di [Github](https://github.com/DVCone/recitation_report).
 - Apabila terdapat perubahan serta perbaruan dari kode pada Aplikasi ini maka dapat diperiksa pada gudang kode [Github](https://github.com/DVCone/recitation_report) dengan melihat [Log Update](https://github.com/DVCone/recitation_report/commits)nya.
 ---
+## Update Log:
+
+- `stateful widget` digunakan untuk fitur baru yaitu checklist kehadiran pada setiap harinya dalam seminggu.
+- Perbaikan tampilan halaman utama `home_page` untuk perangkat dengan layar berukuran 360 lebar akan ditampilkan 1 kolom daftar siswa. 
+- Perbaikan tampilan halaman detail `detail_page` untuk perangkat dengan layar berukuran 480 lebar akan ditampilkan kartu siswa dan kartu kehadiran sesuai ukuran lebarnya.
+
+> Aplikasi ini sangat disarankan untuk digunakan pada lebar ukuran perangkat layar minimal 360, 480 atau 500 hingga lebih dan **sangat tidak disarankan** untuk menggunakan tambilan ukuran lebar layar dibawah 360
+
+---
 ## Penulis:
 
     - Nama  : Muhammad Hakim Almadani
