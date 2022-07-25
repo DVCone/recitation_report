@@ -19,8 +19,8 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          "Size: ${MediaQuery.of(context).size.width}",
+        title: const Text(
+          "Halaqah Qur'an",
           style: appTitle,
         ),
       ),
