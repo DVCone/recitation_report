@@ -54,11 +54,29 @@ Berikut adalah detail data program dari **Aplikasi Halaqah Qur'an** :
 ---
 ## Update Log:
 
-- `stateful widget` digunakan untuk fitur baru yaitu checklist kehadiran pada setiap harinya dalam seminggu.
-- Perbaikan tampilan halaman utama `home_page` untuk perangkat dengan layar berukuran 360 lebar akan ditampilkan 1 kolom daftar siswa. 
-- Perbaikan tampilan halaman detail `detail_page` untuk perangkat dengan layar berukuran 480 lebar akan ditampilkan kartu siswa dan kartu kehadiran sesuai ukuran lebarnya.
+- **250722c**
+    - `stateful widget` digunakan untuk fitur baru yaitu checklist kehadiran pada setiap harinya dalam seminggu.
+    - Perbaikan tampilan halaman utama `home_page` untuk perangkat dengan layar berukuran 360 lebar akan ditampilkan 1 kolom daftar siswa. 
+    - Perbaikan tampilan halaman detail `detail_page` untuk perangkat dengan layar berukuran 480 lebar akan ditampilkan kartu siswa dan kartu kehadiran sesuai ukuran lebarnya.
 
-> Aplikasi ini sangat disarankan untuk digunakan pada lebar ukuran perangkat layar minimal 360, 480 atau 500 hingga lebih dan **sangat tidak disarankan** untuk menggunakan tambilan ukuran lebar layar dibawah 360
+    > Aplikasi ini sangat disarankan untuk digunakan pada lebar ukuran perangkat layar minimal 360, 480 atau 500 hingga lebih dan **sangat tidak disarankan** untuk menggunakan tambilan ukuran lebar layar dibawah 360
+
+- **270722a**
+    - restrukturisasi folder widget sesuai dengan penggunaan halamannya `/lib/widget/...`.
+    - Perbaikan tampilan halaman detail 'detail_page' untuk perangkat dengan layar berukuran 320. berikut adalah skala layar tampilan yang dapat digunakan oleh aplikasi ini :
+
+|Lebar  |Ukuran |Resolusi       |
+|---    |---    |---            |
+|1366   |       |               |
+|720    |5,0"   |1080 x 1920    |
+|600    |       |900  x 1600    |
+|500    |       |               |
+|480    |       |720  x 1280    |
+|360    |       |540  x 960     |
+|320    |3,7"   |480  x 800     |
+|320    |3,3"   |240  x 432     |
+|320    |2,7"   |240  x 320     |
+|       |       |               |
 
 ---
 ## Penulis:

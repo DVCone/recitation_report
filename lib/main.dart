@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recitation_report/page/home_page.dart';
+import 'package:recitation_report/view/home_page.dart';
 
 void main() {
   runApp(const MyApp());

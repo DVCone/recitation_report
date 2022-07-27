@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:recitation_report/model/student_model.dart';
 import 'package:recitation_report/style/style.dart';
-import 'package:recitation_report/widget/day_list.dart';
-import 'package:recitation_report/widget/student_card.dart';
-import 'package:recitation_report/widget/access_denied.dart';
-import 'package:recitation_report/widget/table_card.dart';
+import 'package:recitation_report/widget/detail_widget/day_list.dart';
+import 'package:recitation_report/widget/detail_widget/student_card.dart';
+import 'package:recitation_report/widget/global_widget/access_denied.dart';
+import 'package:recitation_report/widget/detail_widget/table_card.dart';
 
 class DetailPage extends StatelessWidget {
   final StudentModel? elementUser;
@@ -19,8 +19,8 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
-          "Halaqah Qur'an",
+        title: Text(
+          "Size: ${MediaQuery.of(context).size.width}",
           style: appTitle,
         ),
       ),
@@ -78,8 +78,20 @@ class DetailPage extends StatelessWidget {
     );
   }
 
-  studentCardWidth(BuildContext context, BoxConstraints constraints) {
-    if (constraints.maxWidth <= 360) {
+  studentCardWidth(
+    BuildContext context,
+    BoxConstraints constraints,
+  ) {
+    if (constraints.maxWidth <= 320) {
+      return StudentCard(
+        elementUser: elementUser,
+        widthSize: 300,
+        imageSize: 100,
+        titleSize: 12,
+        subtitleSize: 10,
+        paddingSize: 10,
+      );
+    } else if (constraints.maxWidth <= 360) {
       return StudentCard(
         elementUser: elementUser,
         widthSize: 320,
@@ -87,17 +99,6 @@ class DetailPage extends StatelessWidget {
         subtitleSize: 12,
         titleSize: 15,
         paddingSize: 25,
-        attendanceSize: 50,
-      );
-    } else if (constraints.maxWidth <= 480) {
-      return StudentCard(
-        elementUser: elementUser,
-        widthSize: 450,
-        imageSize: 130,
-        titleSize: 20,
-        subtitleSize: 15,
-        paddingSize: 20,
-        attendanceSize: 110,
       );
     } else {
       return StudentCard(
@@ -107,43 +108,57 @@ class DetailPage extends StatelessWidget {
         titleSize: 20,
         subtitleSize: 15,
         paddingSize: 20,
-        attendanceSize: 130,
       );
     }
   }
 
-  reportCardWidt(BuildContext context, BoxConstraints constraints) {
-    if (constraints.maxWidth <= 360) {
+  reportCardWidt(
+    BuildContext context,
+    BoxConstraints constraints,
+  ) {
+    if (constraints.maxWidth <= 320) {
+      return TableCard(
+        elementUser: elementUser,
+        columnSize: 10,
+        rowSize: 8,
+        columnSpace: 28,
+      );
+    } else if (constraints.maxWidth <= 360) {
       return TableCard(
         elementUser: elementUser,
         columnSize: 11,
         rowSize: 10,
+        columnSpace: 20,
       );
     } else {
       return TableCard(
         elementUser: elementUser,
         columnSize: 15,
         rowSize: 12,
+        columnSpace: 56,
       );
     }
   }
 
-  dayListPage(BuildContext context, BoxConstraints constraints) {
-    if (constraints.maxWidth <= 360) {
+  dayListPage(
+    BuildContext context,
+    BoxConstraints constraints,
+  ) {
+    if (constraints.maxWidth <= 320) {
+      return const DayList(
+        attendanceSize: 25,
+        subtitleSize: 10,
+        widthSize: 300,
+      );
+    } else if (constraints.maxWidth <= 360) {
       return const DayList(
         attendanceSize: 50,
         subtitleSize: 12,
         widthSize: 320,
       );
-    } else if (constraints.maxWidth <= 480) {
-      return const DayList(
-        attendanceSize: 110,
-        subtitleSize: 15,
-        widthSize: 450,
-      );
     } else {
       return const DayList(
-        attendanceSize: 130,
+        attendanceSize: 110,
         subtitleSize: 15,
         widthSize: 450,
       );

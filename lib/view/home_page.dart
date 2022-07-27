@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recitation_report/style/style.dart';
-import 'package:recitation_report/widget/access_denied.dart';
-import 'package:recitation_report/widget/student_list.dart';
+import 'package:recitation_report/widget/global_widget/access_denied.dart';
+import 'package:recitation_report/widget/home_widget/student_list.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

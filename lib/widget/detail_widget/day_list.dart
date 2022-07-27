@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recitation_report/style/style.dart';
-import 'package:recitation_report/widget/attendance_check.dart';
+import 'package:recitation_report/widget/global_widget/attendance_check.dart';
 
 class DayList extends StatelessWidget {
   const DayList({

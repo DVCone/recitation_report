@@ -6,13 +6,16 @@ class TableCard extends StatelessWidget {
   const TableCard({
     Key? key,
     required this.elementUser,
-    required this.columnSize, required this.rowSize,
+    required this.columnSize,
+    required this.rowSize,
+    required this.columnSpace,
   }) : super(key: key);
 
   final StudentModel? elementUser;
 
   final double columnSize;
   final double rowSize;
+  final double columnSpace;
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +83,7 @@ class TableCard extends StatelessWidget {
       ),
       elevation: 4.0,
       child: DataTable(
+        columnSpacing: columnSpace,
         columns: _createColumns(elementUser),
         rows: rows,
       ),

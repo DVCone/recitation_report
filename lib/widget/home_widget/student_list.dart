@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recitation_report/model/student_model.dart';
-import 'package:recitation_report/page/detail_page.dart';
+import 'package:recitation_report/view/detail_page.dart';
 import 'package:recitation_report/style/style.dart';
 
 class DaftarSiswa extends StatelessWidget {

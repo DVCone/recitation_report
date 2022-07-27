@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recitation_report/model/student_model.dart';
 import 'package:recitation_report/style/style.dart';
-import 'package:recitation_report/widget/day_list.dart';
 
 class StudentCard extends StatelessWidget {
   const StudentCard({
@@ -12,7 +11,6 @@ class StudentCard extends StatelessWidget {
     required this.titleSize,
     required this.subtitleSize,
     required this.paddingSize,
-    required this.attendanceSize,
   }) : super(key: key);
 
   final StudentModel? elementUser;
@@ -22,7 +20,6 @@ class StudentCard extends StatelessWidget {
   final double titleSize;
   final double subtitleSize;
   final double paddingSize;
-  final double attendanceSize;
 
   @override
   Widget build(BuildContext context) {
