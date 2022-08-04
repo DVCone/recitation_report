@@ -1,3 +1,5 @@
+![preview.jpg](https://github.com/DVCone/recitation_report/blob/main/assets/preview.png)
+
 # Halaqah Qur'an 
 [![wakatime](https://wakatime.com/badge/user/ea3799ac-dc84-430f-9b45-6cd02a01eccd/project/b9fba97a-af6d-4548-94f6-8a156e8f0b59.svg)](https://wakatime.com/badge/user/ea3799ac-dc84-430f-9b45-6cd02a01eccd/project/b9fba97a-af6d-4548-94f6-8a156e8f0b59)
 
